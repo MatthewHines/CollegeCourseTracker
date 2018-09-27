@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hines.matthew.wgucoursetracker">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TermDetailsActivity"
+            android:label="@string/title_activity_term_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CourseActivity"
+            android:label="@string/title_activity_course"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AssessmentActivity"
+            android:label="@string/title_activity_assessment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CourseListActivity"
+            android:label="@string/title_activity_course_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AssessmentListActivity"
+            android:label="@string/title_activity_assessment_list"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

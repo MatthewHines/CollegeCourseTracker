@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/course_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="course icon"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_class"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/course_title"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="@id/course_icon"
+        app:layout_constraintStart_toEndOf="@id/course_icon"
+        app:layout_constraintTop_toTopOf="@id/course_icon"
+        app:layout_constraintEnd_toStartOf="@id/course_assessment"/>
+
+    <TextView
+        android:id="@+id/course_credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:paddingBottom="2dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="2dp"
+        android:text="@string/course_title"
+        app:layout_constraintEnd_toEndOf="@id/course_icon"
+        app:layout_constraintStart_toStartOf="@id/course_icon"
+        app:layout_constraintTop_toBottomOf="@id/course_icon" />
+
+    <TextView
+        android:id="@+id/course_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="2dp"
+        android:text="@string/date_start"
+        app:layout_constraintStart_toStartOf="@id/course_credits"
+        app:layout_constraintTop_toBottomOf="@id/course_credits" />
+
+    <TextView
+        android:id="@+id/course_date_hyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="@string/date_hyphen"
+        app:layout_constraintStart_toEndOf="@id/course_start"
+        app:layout_constraintTop_toTopOf="@id/course_start"
+        app:layout_constraintBottom_toBottomOf="@id/course_start"/>
+
+    <TextView
+        android:id="@+id/course_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="@string/date_start"
+        app:layout_constraintStart_toEndOf="@id/course_date_hyphen"
+        app:layout_constraintTop_toTopOf="@id/course_date_hyphen"
+        app:layout_constraintBottom_toBottomOf="@id/course_date_hyphen"/>
+
+    <TextView
+        android:id="@+id/course_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:text="@string/course_description"
+        app:layout_constraintStart_toStartOf="@id/course_start"
+        app:layout_constraintTop_toBottomOf="@id/course_start" />
+
+    <TextView
+        android:id="@+id/course_passed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:text="@string/assessment_passed"
+        app:layout_constraintEnd_toStartOf="@id/delete_button"
+        app:layout_constraintTop_toBottomOf="@id/course_assessment" />
+
+    <TextView
+        android:id="@+id/course_assessment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:text="@string/course_assessments"
+        app:layout_constraintBottom_toBottomOf="@id/course_icon"
+        app:layout_constraintEnd_toStartOf="@id/delete_button"
+        app:layout_constraintTop_toTopOf="@id/course_icon" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_divider"
+        android:background="@color/red"
+        tools:ignore="HardcodedText"
+        android:visibility="gone"/>
+
+    <View
+        style="@style/HorizontalDivider"
+        android:id="@+id/bottom_divider"
+        app:layout_constraintTop_toBottomOf="@id/course_description" />
+
+
+</android.support.constraint.ConstraintLayout>

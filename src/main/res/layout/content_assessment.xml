@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AssessmentActivity"
+    tools:ignore="HardcodedText"
+    tools:showIn="@layout/app_bar_assessment">
+
+    <EditText
+        android:id="@+id/assessment_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:hint="Enter Title Here"
+        android:inputType="text"
+        android:padding="5dp"
+        android:text="@string/term_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".02"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/assessment_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/assessment_course"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/assessment_passed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/assessment_passed"
+        app:layout_constraintHorizontal_bias=".50"
+        app:layout_constraintTop_toBottomOf="@id/assessment_title" />
+
+    <EditText
+        android:id="@+id/assessment_due_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:hint="Enter due date here"
+        android:inputType="date"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/assessment_passed" />
+
+    <EditText
+        android:id="@+id/assessment_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="10dp"
+        android:hint="Enter details here. Performance/objective assessment?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/assessment_due_date" />
+
+    <View
+        android:id="@+id/text_divider"
+        style="@style/HorizontalDivider"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@id/assessment_description" />
+
+
+    <ImageButton
+        android:id="@+id/edit_assessment"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="@string/edit_term"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit" />
+
+    <ImageButton
+        android:id="@+id/cancel_edit_assessment"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Cancel Edit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/save_assessment"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/save_assessment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_cancel"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/save_assessment"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Save"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_right_90"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_save"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/assessment_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="top"
+        android:hint="@string/term_notes_hint"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_divider" />
+
+
+</android.support.constraint.ConstraintLayout>

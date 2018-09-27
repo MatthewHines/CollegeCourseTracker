@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/app_bar_home">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_terms"
+            android:icon="@drawable/ic_grad_cap"
+            android:title="@string/nav_term_list" />
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/ic_class"
+            android:title="@string/nav_course_list" />
+        <item
+            android:id="@+id/nav_assessments"
+            android:icon="@drawable/ic_assessment"
+            android:title="@string/nav_assessment_list" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/nav_share" />
+    </group>
+
+</menu>

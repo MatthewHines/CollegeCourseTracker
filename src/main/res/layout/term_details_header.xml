@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/term_details_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TermDetailsActivity"
+    tools:showIn="@layout/content_term_details">
+
+    <EditText
+        android:id="@+id/term_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="Enter Title Here"
+        android:inputType="text"
+        android:padding="5dp"
+        android:text="@string/term_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".02"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/dates_hyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/date_hyphen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/term_title" />
+
+    <EditText
+        android:id="@+id/term_dates_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:inputType="date"
+        android:text="@string/date_start"
+        app:layout_constraintBottom_toBottomOf="@id/dates_hyphen"
+        app:layout_constraintEnd_toStartOf="@id/dates_hyphen"
+        app:layout_constraintTop_toTopOf="@id/dates_hyphen" />
+
+    <EditText
+        android:id="@+id/term_dates_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:inputType="date"
+        android:text="@string/date_end"
+        app:layout_constraintBottom_toBottomOf="@id/dates_hyphen"
+        app:layout_constraintStart_toEndOf="@id/dates_hyphen"
+        app:layout_constraintTop_toTopOf="@id/dates_hyphen" />
+
+
+    <ProgressBar
+        android:id="@+id/term_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_header_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_left"
+        app:layout_constraintTop_toBottomOf="@id/dates_hyphen"
+        app:layout_constraintVertical_bias=".50" />
+
+    <TextView
+        android:id="@+id/term_credit_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/term_progress"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/term_progress_bar"
+        app:layout_constraintVertical_bias=".50" />
+
+    <ImageButton
+        android:id="@+id/edit_term"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Edit"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_header_h_15"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_right_90"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/cancel_edit_term"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Cancel Edit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_header_h_15"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/save_term"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_cancel"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/save_term"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Save"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_header_h_15"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_right_90"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_save"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/term_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="top"
+        android:hint="@string/term_notes_hint"
+        android:inputType="textMultiLine"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toTopOf="@id/header_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/term_credit_progress" />
+
+    <View
+        android:id="@+id/header_bottom"
+        style="@style/HorizontalDivider"
+        app:layout_constraintBottom_toBottomOf="@id/term_details_header" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_h_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+
+</android.support.constraint.ConstraintLayout>

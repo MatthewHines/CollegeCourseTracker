@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CourseActivity"
+    tools:showIn="@layout/app_bar_course">
+
+    <EditText
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="Enter Title Here"
+        android:inputType="text"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".02"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/course_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/course_term"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/course_credits"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:hint="Credit value"
+        android:visibility="visible"
+        android:focusable="false"
+        android:inputType="number"
+        android:background="@color/transparent"
+        android:digits="1234567890"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_term"
+        app:layout_constraintEnd_toStartOf="@id/course_title"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/course_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:inputType="date"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dates_hyphen"
+        app:layout_constraintEnd_toStartOf="@id/dates_hyphen"
+        app:layout_constraintTop_toTopOf="@id/dates_hyphen" />
+
+    <TextView
+        android:id="@+id/dates_hyphen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/date_hyphen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_title" />
+
+    <EditText
+        android:id="@+id/course_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:inputType="date"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dates_hyphen"
+        app:layout_constraintStart_toEndOf="@id/dates_hyphen"
+        app:layout_constraintTop_toTopOf="@id/dates_hyphen" />
+
+    <View
+        style="@style/HorizontalDivider"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:id="@+id/text_divider"
+        app:layout_constraintTop_toBottomOf="@id/course_description" />
+
+    <EditText
+        android:id="@+id/course_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:padding="10dp"
+        android:hint="Enter course description here."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dates_hyphen"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/edit_course"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Edit"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_right_90"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_edit"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/cancel_edit_course"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Cancel Edit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/save_course"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@id/save_course"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_cancel"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/save_course"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="?android:selectableItemBackground"
+        android:contentDescription="Save"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_header_right_90"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_save"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/course_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="top"
+        android:hint="@string/term_notes_hint"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/header_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_divider" />
+
+    <View
+        android:id="@+id/header_bottom"
+        style="@style/HorizontalDivider"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_50" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_right_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_header_h_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".50" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/assessment_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_50" />
+
+</android.support.constraint.ConstraintLayout>
